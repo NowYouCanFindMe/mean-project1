@@ -1,0 +1,29 @@
+extend layout
+block content
+  p
+    | Congrats you just made your first Node.js with Express website.
+    | Feel free to change the source code in index.js to make this
+    | website your own.
+  p
+    | However i know jade is a bit wacky to get use to use.
+    | Here is an awesome site to use to cheat your way to mastery.
+  a(href='https://html2jade.org/') HTML 2 Jade
+  p
+    | Also, like Python jade is very 'tab' sensitive. Make sure
+    | you are neat.
+  p Best of luck.
+
+block sidebar
+  .widget
+    h1 Widget
+    p Click the button to display the hour of the time right now.
+    button(onclick='myFunction()') Try it
+    p#demo
+    script.
+      function myFunction() {
+      var d = new Date();
+      var h = d.getHours();
+      var m = d.getMinutes();
+      var time = h + ':' +m;
+      document.getElementById("demo").innerHTML = time;
+      }

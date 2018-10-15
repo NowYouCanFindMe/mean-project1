@@ -1,6 +1,7 @@
 /*
  * Module dependencies
  */
+var path = require('path')
 var express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
@@ -19,8 +20,8 @@ var express = require('express')
     , compile: compile
     }
   ))
-  app.use(express.static(__dirname + '/public'))
-
+  app.use(express.static(path.join(__dirname + '/public')))
+  //route
   app.get('/', function (req, res) {
   res.render('index',
   { title : 'Home' }
